@@ -4,15 +4,15 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from './firebaseConfig';
 
-// Inicializa o Firebase
+// Inicializando o Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export default function Login() {
-  const [isLogin, setIsLogin] = useState(true); // Determina se é login ou criação de conta
+  const [isLogin, setIsLogin] = useState(true); 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [login, setLogin] = useState(''); // Novo estado para o nome de usuário
+  const [login, setLogin] = useState(''); 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -24,13 +24,10 @@ export default function Login() {
 
     try {
       if (isLogin) {
-        // Login do usuário
         await signInWithEmailAndPassword(auth, email, password);
       } else {
-        // Cadastro do usuário com nome de usuário, email e senha
         await createUserWithEmailAndPassword(auth, email, password);
-        // Aqui você pode salvar o nome de usuário no banco de dados, se necessário
-        // Exemplo: saveUserName(login);
+
       }
       navigate('/home');
     } catch (error) {
@@ -41,9 +38,9 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="max-h-screen bg-black-50 flex flex-col justify-start py-14 sm:px-1 lg:px-1">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
           {isLogin ? 'Entrar na sua conta' : 'Criar nova conta'}
         </h2>
       </div>
@@ -51,7 +48,7 @@ export default function Login() {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* Campo de Nome de Usuário - Exibido apenas no cadastro */}
+            {/* Nome de Usu´ario */}
             {!isLogin && (
               <div>
                 <label htmlFor="login" className="block text-sm font-medium text-gray-700">

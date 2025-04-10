@@ -64,7 +64,7 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Grid de botões */}
+          {/* Grid dos botõe s */}
           <div className="grid grid-cols-3 gap-[3px] max-h-[460px] relative">
             {buttons.map((button) =>
               button.name === 'SPED' || button.name === 'Dicas / Versões' ? (
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modelo */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md text-white">

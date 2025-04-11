@@ -50,6 +50,7 @@ export default function RTM() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
+                  transform: "scale(0.6) translateY(-15%)",
                 }}
               />
               <span className="text-lg font-semibold absolute bottom-2 left-1/2 -translate-x-1/2 z-10">

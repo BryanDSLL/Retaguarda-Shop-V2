@@ -32,8 +32,8 @@ export default function Comandos() {
 
   return (
     <div className="min-h-screen bg-gray-900 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-3 gap-[4px] max-h-[460px]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-3 gap-4">
           {items.map(item => (
             <a
               key={item.id}
@@ -41,7 +41,7 @@ export default function Comandos() {
               target="_blank"
               rel="noopener noreferrer"
               className="relative bg-gray-800/90 backdrop-blur-sm hover:bg-gray-700/90 text-white rounded-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col justify-center items-center shadow-lg border border-gray-700/50 overflow-hidden aspect-[21/9]"
-              style={{ height: "calc(98% - 0.5rem)", margin: "0" }}
+              style={{ height: "calc(250% - 0.5rem)", width: "calc(80% - 0.5rem)", margin: "0" }}
             >
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-300 hover:opacity-80"
@@ -50,10 +50,10 @@ export default function Comandos() {
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  transform: "scale(0.6)",
+                  transform: "scale(0.6) translateY(-15%)",
                 }}
               />
-              <span className="text-lg font-semibold absolute bottom-2 left-1/2 -translate-x-1/2 z-10">
+              <span className="text-lg font-semibold absolute bottom-2 left-1/2 -translate-x-1/2 z-5">
                 {item.title}
               </span>
             </a>

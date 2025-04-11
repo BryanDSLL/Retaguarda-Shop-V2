@@ -52,7 +52,7 @@ export default function Relatorios() {
                   backgroundRepeat: "no-repeat",
                 }}
               />
-              <span className="text-xl font-semibold relative z-10 p-2">
+              <span className="text-lg font-semibold absolute bottom-2 left-1/2 -translate-x-1/2 z-10">
                 {item.title}
               </span>
             </a>

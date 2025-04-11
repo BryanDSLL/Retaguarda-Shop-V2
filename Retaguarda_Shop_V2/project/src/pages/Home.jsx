@@ -60,7 +60,7 @@ export default function Home() {
               onClick={() => setShowModal(true)}
               className="relative bg-gray-800/90 backdrop-blur-sm hover:bg-gray-700/90 text-white rounded-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col justify-center items-center shadow-lg border border-gray-700/50 overflow-hidden py-2 px-4"
             >
-              <span className="text-lg font-semibold relative z-10">Sugerir Material</span>
+              <span className="font-semibold relative z-10">Sugerir Material</span>
             </button>
           </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
                   </a>
                   {button.name === 'Dicas / Versões' && (
                     <p className="text-gray-400 text-center text-xs italic absolute bottom-2 left-0 right-0 mx-auto pr-2 pb-2">
-                      Solicitar acesso ao Willramos.sup.shop
+                      Necessário solicitar acesso!
                     </p>
                   )}
                 </div>
@@ -132,7 +132,7 @@ export default function Home() {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md text-white">
-            <h2 className="text-2xl font-bold mb-4">Sugerir Material</h2>
+            <h2 className="text-xl font-bold mb-10">Sugerir Material</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
@@ -140,14 +140,14 @@ export default function Home() {
                 placeholder="Título"
                 value={formData.title}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 rounded bg-gray-700 text-white"
+                className="text-sm w-full px-2 py-2 rounded bg-gray-700 text-white"
               />
               <textarea
                 name="description"
                 placeholder="Descrição"
                 value={formData.description}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 rounded bg-gray-700 text-white"
+                className="text-sm w-full px-2 py-2 rounded bg-gray-700 text-white"
               />
               <input
                 type="text"
@@ -155,7 +155,7 @@ export default function Home() {
                 placeholder="Link"
                 value={formData.link}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 rounded bg-gray-700 text-white"
+                className="text-sm w-full px-2 py-2 rounded bg-gray-700 text-white"
               />
               <div className="flex justify-end space-x-4">
                 <button

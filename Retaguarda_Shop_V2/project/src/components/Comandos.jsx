@@ -44,15 +44,16 @@ export default function Comandos() {
               style={{ height: "calc(98% - 0.5rem)", margin: "0" }}
             >
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-30 transition-opacity duration-300 hover:opacity-40"
+                className="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-300 hover:opacity-80"
                 style={{
                   backgroundImage: `url(${item.image || ''})`,
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
+                  transform: "scale(0.6)",
                 }}
               />
-              <span className="text-xl font-semibold relative z-10 p-2">
+              <span className="text-lg font-semibold absolute bottom-2 left-1/2 -translate-x-1/2 z-10">
                 {item.title}
               </span>
             </a>
